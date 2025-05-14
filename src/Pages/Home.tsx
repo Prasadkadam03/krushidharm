@@ -2,14 +2,14 @@ import { FaFacebookF, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 
 const ProductsNow = [
   { id: 1, name: 'Green Grapes', price: 200, image: '/assets/Green-Grapes.jpg' },
-  { id: 2, name: 'Combo Grapes', price: 200, image: '/assets/Black+Green.jpg' },
+  { id: 2, name: 'Combo Grapes', price: 200, image: '/assets/Black-Green.jpg' },
   { id: 3, name: 'Black Grapes', price: 200, image: '/assets/Black-Grapes.jpg' },
-  { id: 4, name: 'Onion', price: 200, image: '/assets/onion.jpg' },
+  { id: 4, name: 'Onion', price: 200, image: '/assets/Onion.jpg' },
 ];
 
 const ProductsSoon = [
   { id: 1, name: 'Pomegranate', price: 200, image: '/assets/Pomogranate.jpg' },
-  { id: 2, name: 'Dragon fruit', price: 200, image: '/assets/Dragon_fruit.jpg' },
+  { id: 2, name: 'Dragon Fruit', price: 200, image: '/assets/Dragon-Fruit.jpg' },
   { id: 3, name: 'Chili', price: 200, image: '/assets/Chili.jpg' },
 ];
 
@@ -30,7 +30,9 @@ export const Home = () => {
             <p className="text-md sm:text-lg font-bold text-green-900">
               Premium Fresh Grapes Delivered From Farm to You
             </p>
-            <p className="text-sm sm:text-md text-green-800 italic">Organic | Handpicked | Farm Fresh</p>
+            <p className="text-sm sm:text-md text-green-800 italic">
+              Organic | Handpicked | Farm Fresh
+            </p>
           </div>
         </div>
       </header>
@@ -75,12 +77,12 @@ export const Home = () => {
               <div className="p-5 flex flex-col items-center text-center">
                 <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
                 <p className="text-green-700 text-lg font-medium mb-4">₹{product.price} / kg</p>
-                <a
+                <button
                   onClick={() => alert('Coming Soon!')}
                   className="cursor-pointer bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full shadow-md transition-all"
                 >
                   Buy Now
-                </a>
+                </button>
               </div>
             </div>
           ))}
