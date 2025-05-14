@@ -1,34 +1,35 @@
 import { FaFacebookF, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 
 const ProductsNow = [
-  { id: 1, name: 'Green Grapes', price: 200, image: 'src/assets/Green-Grapes.jpg' },
-  { id: 2, name: 'Combo Grapes', price: 200, image: 'src/assets/Black+Green.jpg' },
-  { id: 3, name: 'Black Grapes', price: 200, image: 'src/assets/Black-Grapes.jpg' },
-  { id: 4, name: 'Onion', price: 200, image: 'src/assets/onion.jpg' },
+  { id: 1, name: 'Green Grapes', price: 200, image: '/assets/Green-Grapes.jpg' },
+  { id: 2, name: 'Combo Grapes', price: 200, image: '/assets/Black+Green.jpg' },
+  { id: 3, name: 'Black Grapes', price: 200, image: '/assets/Black-Grapes.jpg' },
+  { id: 4, name: 'Onion', price: 200, image: '/assets/onion.jpg' },
 ];
 
 const ProductsSoon = [
-  { id: 1, name: 'Pomegranate', price: 200, image: 'src/assets/Pomogranate.jpg' },
-  { id: 2, name: 'Dragon fruit', price: 200, image: 'src/assets/Dragon_fruit.jpg' },
-  { id: 3, name: 'Chili', price: 200, image: 'src/assets/Chili.jpg' },
+  { id: 1, name: 'Pomegranate', price: 200, image: '/assets/Pomogranate.jpg' },
+  { id: 2, name: 'Dragon fruit', price: 200, image: '/assets/Dragon_fruit.jpg' },
+  { id: 3, name: 'Chili', price: 200, image: '/assets/Chili.jpg' },
 ];
 
 export const Home = () => {
   return (
     <div className="bg-green-50 text-gray-800 min-h-screen font-sans">
-
       {/* Hero/Header Section */}
-      <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-10 py-1  px-4 sm:px-8">
+      <header className="bg-white shadow-md fixed top-0 left-0 right-0 z-10 py-1 px-4 sm:px-8">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="w-70 aspect-[3/1] overflow-hidden">
             <img
-              src="src/assets/KRUSHIDHARM.png"
+              src="/assets/KRUSHIDHARM.png"
               alt="KRUSHIDHARM"
               className="w-full h-full object-cover object-center"
             />
           </div>
           <div className="text-center sm:text-left">
-            <p className="text-md sm:text-lg font-bold text-green-900">Premium Fresh Grapes Delivered From Farm to You</p>
+            <p className="text-md sm:text-lg font-bold text-green-900">
+              Premium Fresh Grapes Delivered From Farm to You
+            </p>
             <p className="text-sm sm:text-md text-green-800 italic">Organic | Handpicked | Farm Fresh</p>
           </div>
         </div>
@@ -76,9 +77,7 @@ export const Home = () => {
                 <p className="text-green-700 text-lg font-medium mb-4">₹{product.price} / kg</p>
                 <a
                   onClick={() => alert('Coming Soon!')}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full shadow-md transition-all"
+                  className="cursor-pointer bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-6 rounded-full shadow-md transition-all"
                 >
                   Buy Now
                 </a>
@@ -94,7 +93,7 @@ export const Home = () => {
           <div className="text-center sm:text-left">
             <div className="w-70 aspect-[3/1] overflow-hidden">
               <img
-                src="src/assets/KRUSHIDHARM.png"
+                src="/assets/KRUSHIDHARM.png"
                 alt="KRUSHIDHARM"
                 className="w-full h-full object-cover object-center"
               />
