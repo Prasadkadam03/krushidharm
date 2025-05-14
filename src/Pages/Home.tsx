@@ -12,7 +12,7 @@ export const Home = () => {
             </div>
             <div
                 className="relative h-96 w-full bg-cover bg-center flex flex-col items-center justify-center items-center justify-center"
-                style={{ backgroundImage: `url(${BgImage})` }}
+                style={{ backgroundImage: `url(src/assets/Black-Grapes-2.jpg)` }}
             >
                 <h1 className="text-4xl font-bold mb-4 ">Welcome to My App</h1>
                 <p className="text-lg ">This is a simple React app with Tailwind CSS.</p>
