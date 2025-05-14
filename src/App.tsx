@@ -1,5 +1,4 @@
-// import { Home } from "./Pages/Home"
-import { Krushi } from "./Pages/krushi"
+import { Home } from "./Pages/Home"
 
 
 function App() {
@@ -7,8 +6,7 @@ function App() {
 
   return (
     <>
-      {/* <Home/>  */}
-      <Krushi/>     
+      <Home/> 
     </>
   )
 }
