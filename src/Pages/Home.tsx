@@ -3,7 +3,6 @@ import {
   FaFacebookF,
   FaInstagram,
   FaPhoneAlt,
-  FaLeaf,
   FaHandHolding,
   FaTruck,
   FaRupeeSign,
@@ -18,19 +17,19 @@ type Product = {
 };
 
 const productsNow: Product[] = [
-  { id: 1, name: 'Green Grapes', price: "155", image: '/assets/Green-Grapes.jpg' },
-  { id: 2, name: 'Combo Grapes', price: "200", image: '/assets/Black-Green.jpg' },
-  { id: 3, name: 'Red Grapes', price: "205", image: '/assets/Black-Grapes.jpg' },
-  { id: 4, name: 'Onion', price: "200", image: '/assets/Onion.jpg' },
-  { id: 5, name: 'Raisins yellow', price: "360", image: '/assets/Yellow-Raisins.jpg' },
-  { id: 6, name: 'Raisins black', price: "420", image: '/assets/Black-Raisins.jpg' },
+  { id: 1, name: 'Green SSN Grapes', price: "155", image: '/assets/Green-Grapes.jpg' },
+  { id: 2, name: 'Combo Red + Green Grapes', price: "200", image: '/assets/Black-Green.jpg' },
+  { id: 3, name: 'Red Flame Grapes', price: "205", image: '/assets/Black-Grapes.jpg' },
+  { id: 4, name: 'Raisins yellow', price: "360", image: '/assets/Yellow-Raisins.jpg' },
+  { id: 5, name: 'Raisins black', price: "420", image: '/assets/Black-Raisins.jpg' },
 ];
 
 const productsSoon: Product[] = [
   { id: 1, name: 'Pomegranate', price: "160 - 190", image: '/assets/Pomogranate.jpg' },
-  { id: 2, name: 'Dragon Fruit', price: "200", image: '/assets/Dragon-Fruit.jpg' },
-  { id: 3, name: 'Chili', price: "200", image: '/assets/Chili.jpg' },
+  { id: 2, name: 'Dragon Fruit', price: "50 - 100", image: '/assets/Dragon-Fruit.jpg' },
   { id: 4, name: 'Garlic', price: "60 - 90", image: '/assets/Garlic.jpg' },
+  { id: 5, name: 'Onion', price: "30 - 100", image: '/assets/Onion.jpg' },
+
 ];
 
 const ProductCard = ({ product, available = true }: { product: Product; available?: boolean }) => (
@@ -41,7 +40,7 @@ const ProductCard = ({ product, available = true }: { product: Product; availabl
       <p className="text-green-700 text-lg font-medium mb-4">₹{product.price} / kg</p>
       {available ? (
         <a
-          href={`https://wa.me/9665093085?text=Hello%20Krushidharm,%20I%20am%20interested%20in%20buying%201Kg%20of%20${encodeURIComponent(
+          href={`https://wa.me/9665093085?text=Hello%20Farmer,%20I%20am%20interested%20in%20buying%201Kg%20of%20${encodeURIComponent(
             product.name
           )}.`}
           target="_blank"
@@ -114,42 +113,42 @@ export const Home = () => {
 
       {/* Hero Section */}
       <section className="pt-20 sm:pt-28 flex items-center justify-center">
+      <a
+              href="#"
+              aria-label="Instagram"
+              className="text-2xl text-green-800 hover:text-green-600"
+            >
         <img src="/assets/KRUSHIDHARM.png" alt="Krushidharm Banner" className="max-w-full h-auto" />
+      </a>
       </section>
 
       {/* Why Choose Section */}
-      <section className="bg-green-800 text-white py-16 px-4 sm:px-8 rounded-xl shadow-md mx-4 sm:mx-10">
+      <section className="bg-green-800 text-white py-10 mt-5 px-4 sm:px-8 rounded-xl shadow-md mx-4 sm:mx-10">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-extrabold mb-6">Why Choose Krushidharm?</h2>
-          <p className="text-lg sm:text-xl mb-12 text-green-100">
+          <p className="text-lg sm:text-xl mb-5 text-green-100">
             We're not just selling fruits — we’re delivering health, quality, and trust straight from our farms to your doorstep.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {[{
-              icon: FaLeaf,
-              title: '100% Organic',
-              desc: 'No chemicals, just pure nature in every bite.',
-              color: 'text-lime-300',
-            }, {
               icon: FaHandHolding,
               title: 'Handpicked',
-              desc: 'Every grape is carefully selected for top quality.',
+              
               color: 'text-yellow-200',
             }, {
               icon: FaTruck,
               title: 'Farm to Home',
-              desc: 'Delivered fresh with care — always on time.',
+              
               color: 'text-blue-200',
             }, {
               icon: FaRupeeSign,
               title: 'Export Quality',
-              desc: 'Premium produce trusted by global buyers.',
+              
               color: 'text-white',
-            }].map(({ icon: Icon, title, desc, color }) => (
-              <div key={title} className="flex flex-col items-center text-center">
-                <Icon className={`text-5xl mb-4 ${color}`} />
+            }].map(({ icon: Icon, title, color }) => (
+              <div key={title} className="flex flex-col  items-center text-center">
+                <Icon className={`text-4xl mb-4 ${color}`} />
                 <h3 className="text-xl font-semibold mb-2">{title}</h3>
-                <p className="text-sm text-green-100">{desc}</p>
               </div>
             ))}
           </div>
